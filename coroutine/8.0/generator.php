@@ -9,7 +9,7 @@ fwrite($stream, implode(',', [
         "lastName",
     ]) . PHP_EOL);
 
-for ($i = 1; $i <= 1000000; $i++) {
+for ($i = 1; $i <= 100000; $i++) {
     fwrite($stream, implode(',', [
         "user{$i}@example.com",
         "FirstName{$i}",
