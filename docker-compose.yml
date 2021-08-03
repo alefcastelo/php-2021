@@ -1,0 +1,63 @@
+version: '3.7'
+
+services:
+  node-native:
+    build:
+      context: servers/node/native
+    image: node/native:latest
+    ports:
+      - 8080:80
+
+  node-express:
+    build:
+      context: servers/node/express
+    image: node/express:latest
+    ports:
+      - 8080:80
+
+  node-fastify:
+    build:
+      context: servers/node/fastify
+    image: node/fastify:latest
+    ports:
+      - 8080:80
+
+  go-native:
+    build:
+      context: servers/go/native
+    image: go/native:latest
+    ports:
+      - 8080:80
+
+  go-atreugo:
+    build:
+      context: servers/go/atreugo
+    image: go/atreugo:latest
+    ports:
+      - 8080:80
+
+  php-native:
+    build:
+      context: servers/php/native
+    image: php/native:latest
+    ports:
+      - 8080:80
+
+  php-swoole:
+    build:
+      context: servers/php/swoole
+    image: php/swoole:latest
+    ports:
+      - 8080:80
+
+  php-workerman:
+    build:
+      context: servers/php/workerman
+    image: php/workerman:latest
+    ports:
+      - 8080:80
+
+  php-coroutine-fibers:
+    build:
+      context: coroutine/8.1
+    image: php/coroutine:latest
